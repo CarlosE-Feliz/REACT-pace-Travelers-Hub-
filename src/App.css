@@ -1,0 +1,38 @@
+.flex {
+  display: flex;
+}
+
+.nav-bar {
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #3896ff;
+}
+
+.ul-nav {
+  list-style: none;
+  justify-content: space-around;
+}
+
+.nav-item {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.logo img {
+  margin-right: 20px;
+}
+
+.header {
+  border-bottom: 2px gray solid;
+  margin: 0 40px 0 40px;
+}
+
+.img-logo {
+  width: 60px;
+  margin: 5px;
+}
