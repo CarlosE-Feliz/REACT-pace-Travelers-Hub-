@@ -5,7 +5,6 @@ import axios from 'axios';
 const GET_ROCKETS = 'ROCKETS';
 const url = 'https:/api.spacexdata.com/v3/rockets';
 const initialRockets = [];
-
 const reducer = (state = initialRockets, action) => {
   switch (action.type) {
     case GET_ROCKETS:
@@ -28,6 +27,7 @@ export const getRock = () => {
             name: element.rocket_name,
             type: element.rocket_type,
             img: element.flickr_images[0],
+            desc: element.description,
           };
           newData.push(item);
         });
