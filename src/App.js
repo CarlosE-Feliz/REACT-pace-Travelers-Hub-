@@ -11,7 +11,7 @@ import logo from './media/planet.png';
 import Rocks from './componentR/Rockets';
 import SomethingM from './componentM/Missions';
 import MyProfile from './componentP/Profile';
-import store from './componentR/redux/config';
+import store from './redux/config';
 
 function App() {
   return (
