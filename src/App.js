@@ -6,10 +6,12 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import logo from './media/planet.png';
-import Something from './componentR/Rockets';
+import Rocks from './componentR/Rockets';
 import SomethingM from './componentM/Missions';
 import MyProfile from './componentP/Profile';
+import store from './redux/config';
 
 function App() {
   return (
@@ -33,20 +35,22 @@ function App() {
           </ul>
         </nav>
       </div>
-      <Switch>
-        <Route exact path="/">
-          <Something />
-        </Route>
-        <Route path="/mission">
-          <SomethingM />
-        </Route>
-        <Route path="/rockets">
-          <Something />
-        </Route>
-        <Route path="/profile">
-          <MyProfile />
-        </Route>
-      </Switch>
+      <Provider store={store}>
+        <Switch>
+          <Route exact path="/">
+            <Rocks />
+          </Route>
+          <Route path="/mission">
+            <SomethingM />
+          </Route>
+          <Route path="/rockets">
+            <Rocks />
+          </Route>
+          <Route path="/profile">
+            <MyProfile />
+          </Route>
+        </Switch>
+      </Provider>
     </Router>
   );
 }
