@@ -34,7 +34,7 @@ function App() {
         </nav>
       </div>
       <Switch>
-        <Route exact="true" path="/">
+        <Route exact path="/">
           <Something />
         </Route>
         <Route path="/mission">
