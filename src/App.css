@@ -41,10 +41,49 @@ a:focus {
   margin: 5px;
 }
 
+.missions-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 table.missions-table {
+  table-layout: fixed;
+  width: 80%;
+}
+
+table.missions-table td,th {
   border: 1px solid gray;
 }
 
-h3.mission-title-heading {
+th.mission-description {
+  width: 50%;
+}
+
+h4.mission-table-heading {
   margin-right: 30px;
+}
+
+td h4 {
+  font-size: 18px;
+}
+
+
+h4.not-a-member {
+  color: white;
+  background-color: gray;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+button.join-button {
+  background-color: transparent;
+  border: 2px solid gray;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+td.mission-status,
+.mission-button {
+  text-align: center;
 }
