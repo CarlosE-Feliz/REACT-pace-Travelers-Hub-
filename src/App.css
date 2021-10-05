@@ -36,3 +36,11 @@ a {
   width: 60px;
   margin: 5px;
 }
+
+table.missions-table {
+  border: 1px solid gray;
+}
+
+h3.mission-title-heading {
+  margin-right: 30px;
+}
