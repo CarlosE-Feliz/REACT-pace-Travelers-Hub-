@@ -13,6 +13,10 @@ a {
   color: #3896ff;
 }
 
+a:focus {
+  border-bottom: 3px solid #3895ff56;
+}
+
 .ul-nav {
   list-style: none;
   justify-content: space-around;
