@@ -20,3 +20,30 @@ export const Picture = styled.img`
 export const Info = styled.div`
     margin: 2rem;
 `;
+
+export const Profile = styled.div`
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    justify-content: space-around;
+`;
+
+export const Rockets = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 2rem;
+`;
+
+export const RocketsItem = styled.div`
+    border: 1px solid;
+`;
+
+export const RocketItems = styled.div`
+    border-bottom: 1px solid;
+    margin-top: 1rem;
+`;
+
+export const NameRocket = styled.h4`
+    margin: 2rem;
+`;
