@@ -9,7 +9,7 @@ import {
 import { Provider } from 'react-redux';
 import logo from './media/planet.png';
 import Rocks from './componentR/Rockets';
-import SomethingM from './componentM/Missions';
+import Missions from './componentM/Missions';
 import MyProfile from './componentP/Profile';
 import store from './redux/config';
 
@@ -41,7 +41,7 @@ function App() {
             <Rocks />
           </Route>
           <Route path="/mission">
-            <SomethingM />
+            <Missions />
           </Route>
           <Route path="/rockets">
             <Rocks />

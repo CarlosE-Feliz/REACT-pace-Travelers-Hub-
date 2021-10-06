@@ -7,7 +7,7 @@ const initialState = [];
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS:
-      return [...state, action.missionsArr];
+      return [...state, ...action.missionsArr];
     default:
       return state;
   }
@@ -17,18 +17,18 @@ export const getMissions = () => (dispatch) => {
   axios.get(missionsURL)
     .then((res) => {
       const resData = res.data;
-      const missionArr = [];
+      const missionsArr = [];
       resData.forEach((record) => {
         const missionObj = {
           id: record.mission_id,
           name: record.mission_name,
           desc: record.description,
         };
-        missionArr.push(missionObj);
+        missionsArr.push(missionObj);
       });
       dispatch({
         type: GET_MISSIONS,
-        missionArr,
+        missionsArr,
       });
     });
 };
