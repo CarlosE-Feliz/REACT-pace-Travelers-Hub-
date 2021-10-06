@@ -40,3 +40,7 @@ a:focus {
   width: 60px;
   margin: 5px;
 }
+
+h3 {
+  align-self: center;
+}
