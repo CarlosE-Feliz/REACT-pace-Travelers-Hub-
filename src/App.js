@@ -1,19 +1,25 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   NavLink,
 } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import logo from './media/planet.png';
 import Rocks from './componentR/Rockets';
 import SomethingM from './componentM/Missions';
 import MyProfile from './componentP/Profile';
-import store from './redux/config';
+import { getRock } from './redux/API';
 
 function App() {
+  const dispatch = useDispatch();
+  const loadRocketsAction = bindActionCreators(getRock, dispatch);
+  useEffect(() => {
+    loadRocketsAction();
+  }, []);
   return (
     <Router>
       <div className="header">
@@ -59,22 +65,20 @@ function App() {
           </ul>
         </nav>
       </div>
-      <Provider store={store}>
-        <Switch>
-          <Route exact path="/">
-            <Rocks />
-          </Route>
-          <Route path="/mission">
-            <SomethingM />
-          </Route>
-          <Route path="/rockets">
-            <Rocks />
-          </Route>
-          <Route path="/profile">
-            <MyProfile />
-          </Route>
-        </Switch>
-      </Provider>
+      <Switch>
+        <Route exact path="/">
+          <Rocks />
+        </Route>
+        <Route path="/mission">
+          <SomethingM />
+        </Route>
+        <Route path="/rockets">
+          <Rocks />
+        </Route>
+        <Route path="/profile">
+          <MyProfile />
+        </Route>
+      </Switch>
     </Router>
   );
 }

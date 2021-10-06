@@ -36,12 +36,12 @@ export const Rockets = styled.div`
 `;
 
 export const RocketsItem = styled.div`
-    border: 1px solid;
 `;
 
 export const RocketItems = styled.div`
-    border-bottom: 1px solid;
-    margin-top: 1rem;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 0.1rem;
 `;
 
 export const NameRocket = styled.h4`
