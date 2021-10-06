@@ -16,8 +16,8 @@ const MyProfile = () => {
         <h3>My Rockets</h3>
         <RocketsItem>
           {rockets.map((item) => (item.reserved ? (
-            <RocketItems>
-              <NameRocket>{ item.name }</NameRocket>
+            <RocketItems key={item.id}>
+              <NameRocket key={item.id}>{ item.name }</NameRocket>
             </RocketItems>
           ) : null))}
         </RocketsItem>
