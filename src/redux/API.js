@@ -21,7 +21,7 @@ const reducer = (state = initialRockets, action) => {
   }
 };
 
-export const bookReseve = (currentState, id) => (dispatch) => {
+export const rocketReseve = (currentState, id) => (dispatch) => {
   const newState = currentState.map((rocket) => {
     if (rocket.id != id) {
       return rocket;

@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { bookReseve, getRock } from '../redux/API';
+import { rocketReseve, getRock } from '../redux/API';
 
 import {
   Div, Section, Picture, Info,
@@ -13,7 +13,7 @@ const Rockets = () => {
   const dispatch = useDispatch();
   const loadRocketsAction = bindActionCreators(getRock, dispatch);
   const reserved = (e) => {
-    dispatch(bookReseve(post, e.target.id));
+    dispatch(rocketReseve(post, e.target.id));
   };
   useEffect(() => {
     loadRocketsAction();
