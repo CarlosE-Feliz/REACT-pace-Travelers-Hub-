@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
+  NavLink,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import logo from './media/planet.png';
@@ -24,13 +24,37 @@ function App() {
           </div>
           <ul className="flex ul-nav">
             <li className="nav-item">
-              <Link to="/rockets">Rockets</Link>
+              <NavLink
+                activeStyle={{
+                  fontWeight: 'bold',
+                  borderBottom: '3px solid #3895ff56',
+                }}
+                to="/rockets"
+              >
+                Rockets
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/mission">Missions</Link>
+              <NavLink
+                activeStyle={{
+                  fontWeight: 'bold',
+                  borderBottom: '3px solid #3895ff56',
+                }}
+                to="/mission"
+              >
+                Missions
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/profile">My Profile</Link>
+              <NavLink
+                activeStyle={{
+                  fontWeight: 'bold',
+                  borderBottom: '3px solid #3895ff56',
+                }}
+                to="/profile"
+              >
+                My Profile
+              </NavLink>
             </li>
           </ul>
         </nav>
