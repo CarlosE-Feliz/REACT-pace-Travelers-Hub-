@@ -3,26 +3,12 @@
 import axios from 'axios';
 
 const GET_ROCKETS = 'ROCKETS';
-const GET_MISSIONS = 'MISSIONS';
 const rocketsURL = 'https:/api.spacexdata.com/v3/rockets';
-const missionsURL = 'https://api.spacexdata.com/v3/missions';
-const initialState = {
-  rockets: [],
-  missions: [],
-};
+const initialState = [];
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ROCKETS:
-      return {
-        ...state,
-        rockets: action.newData,
-      };
-
-    case GET_MISSIONS:
-      return {
-        ...state,
-        missions: action.missionArr,
-      };
+      return [...state, ...action.newData];
     default:
       return state;
   }
@@ -56,27 +42,5 @@ export const getRock = () => {
 // rocket_name
 // rocket_type
 // flickr_images [0]
-
-export const getMissions = () => {
-  return (dispatch) => {
-    axios.get(missionsURL)
-      .then((res) => {
-        const resData = res.data;
-        const missionArr = [];
-        resData.forEach((record) => {
-          const missionObj = {
-            id: record.mission_id,
-            name: record.mission_name,
-            desc: record.description,
-          };
-          missionArr.push(missionObj);
-        });
-        dispatch({
-          type: GET_MISSIONS,
-          missionArr,
-        });
-      });
-  };
-};
 
 export default reducer;

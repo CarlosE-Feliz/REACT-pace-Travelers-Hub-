@@ -3,13 +3,13 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getRock } from '../redux/API';
+import { getRock } from '../redux/rocketsAPI';
 import {
   Div, Section, Picture, Info,
 } from './styles';
 
 const Rockets = () => {
-  const post = useSelector((state) => state.rockets);
+  const post = useSelector((state) => state.rock);
   const dispatch = useDispatch();
   const loadRocketsAction = bindActionCreators(getRock, dispatch);
   useEffect(() => {
