@@ -28,7 +28,7 @@ const Rockets = () => {
               {post.name}
             </h1>
             <p>
-              {post.reserved ? <span className="badge bg-success">Reserved</span> : null}
+              {post.reserved ? <span style={{ margin: '5px' }} className="badge bg-success">Reserved</span> : null}
               {post.desc}
             </p>
             {post.reserved ? <button type="button" onClick={reserved} id={post.id} className="btn btn-secondary">Cancel Reservation</button> : <button type="button" onClick={reserved} id={post.id} className="btn btn-primary">Reserve Rocket</button>}
