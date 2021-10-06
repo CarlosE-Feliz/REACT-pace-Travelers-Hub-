@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { rocketReseve, getRock } from '../redux/API';
+import { rocketReseve, getRock } from '../redux/rocketsAPI';
 
 import {
   Div, Section, Picture, Info,

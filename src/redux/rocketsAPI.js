@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const GET_ROCKETS = 'GET_ROCKETS';
 const RESERVE_ROCKET = 'RESERVE_ROCKET';
-const url = 'https:/api.spacexdata.com/v3/rockets';
+const rocketsURL = 'https:/api.spacexdata.com/v3/rockets';
 const initialRockets = [];
 const reducer = (state = initialRockets, action) => {
   switch (action.type) {
