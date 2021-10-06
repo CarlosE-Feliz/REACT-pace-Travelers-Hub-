@@ -9,7 +9,7 @@ import {
 } from './styles';
 
 const Rockets = () => {
-  const post = useSelector((state) => state.rock);
+  const post = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
   const loadRocketsAction = bindActionCreators(getRock, dispatch);
   useEffect(() => {
