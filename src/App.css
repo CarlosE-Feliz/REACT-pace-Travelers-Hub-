@@ -50,9 +50,11 @@ a:focus {
 table.missions-table {
   table-layout: fixed;
   width: 80%;
+  margin-top: 25px;
 }
 
-table.missions-table td,th {
+table.missions-table td,
+th {
   border: 1px solid gray;
 }
 
@@ -67,7 +69,6 @@ h4.mission-table-heading {
 td h4 {
   font-size: 18px;
 }
-
 
 h4.not-a-member {
   color: white;
