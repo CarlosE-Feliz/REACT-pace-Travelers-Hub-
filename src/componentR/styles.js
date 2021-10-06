@@ -13,6 +13,8 @@ export const Section = styled.div`
 export const Picture = styled.img`
     width: 250px;
     margin: 2rem;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.37) 0 0 5px 2px;
 `;
 
 export const Info = styled.div`

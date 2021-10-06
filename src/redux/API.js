@@ -26,7 +26,7 @@ export const rocketReseve = (currentState, id) => (dispatch) => {
     if (rocket.id != id) {
       return rocket;
     }
-    return { ...rocket, reserved: true };
+    return { ...rocket, reserved: !rocket.reserved };
   });
   dispatch({
     type: RESERVE_ROCKET,
