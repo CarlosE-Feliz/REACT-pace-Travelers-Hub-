@@ -7,10 +7,16 @@ import {
 
 const MyProfile = () => {
   const rockets = useSelector((state) => state.rock);
+  const missions = useSelector((state) => state.missions);
   return (
     <Profile>
-      <div style={{ width: '50%' }}>
-        My mission
+      <div className="joined-missions">
+        <h3>My Missions</h3>
+        {missions.map((record) => (record.joined ? (
+          <div className="joined-mission-item">
+            <h4 className="joined-mission-title">{record.name}</h4>
+          </div>
+        ) : null))}
       </div>
       <Rockets>
         <h3>My Rockets</h3>

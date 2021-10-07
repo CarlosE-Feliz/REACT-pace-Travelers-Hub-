@@ -1,9 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { joinMission } from '../redux/missionsAPI';
 import Mission from './Mission';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
+  const dispatch = useDispatch();
+  const joined = (e) => {
+    dispatch(joinMission(missions, e.target.id));
+  };
 
   return (
     <div className="missions-list">
@@ -20,8 +25,11 @@ const Missions = () => {
           {missions.map((item) => (
             <Mission
               key={item.id}
+              missionID={item.id}
               missionName={item.name}
               missionDesc={item.desc}
+              hasJoined={item.joined}
+              joinFunc={joined}
             />
           ))}
         </tbody>
