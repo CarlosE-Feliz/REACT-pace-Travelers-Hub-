@@ -10,9 +10,9 @@ import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import logo from './media/planet.png';
 import Rocks from './componentR/Rockets';
-import SomethingM from './componentM/Missions';
+import Missions from './componentM/Missions';
 import MyProfile from './componentP/Profile';
-import { getRock } from './redux/API';
+import { getRock } from './redux/rocketsAPI';
 
 function App() {
   const dispatch = useDispatch();
@@ -70,7 +70,7 @@ function App() {
           <Rocks />
         </Route>
         <Route path="/mission">
-          <SomethingM />
+          <Missions />
         </Route>
         <Route path="/rockets">
           <Rocks />

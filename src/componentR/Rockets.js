@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
 // import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { bindActionCreators } from 'redux';
-import { rocketReseve } from '../redux/API';
+import { rocketReseve } from '../redux/rocketsAPI';
 
 import {
   Div, Section, Picture, Info,
