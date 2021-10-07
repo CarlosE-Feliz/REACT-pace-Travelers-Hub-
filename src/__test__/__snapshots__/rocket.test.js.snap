@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test button Rocketss snapshot test 1`] = `
+<div
+  className="sc-jSgvzq QWMvE"
+>
+  <div>
+    <img
+      alt="img"
+    />
+    <div>
+      <h1>
+        test
+      </h1>
+      <p>
+        <span
+          className="badge bg-success"
+        >
+          Reserved
+        </span>
+      </p>
+      <button
+        className="btn btn-secondary"
+        id="0"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel Reservation
+      </button>
+    </div>
+  </div>
+</div>
+`;
