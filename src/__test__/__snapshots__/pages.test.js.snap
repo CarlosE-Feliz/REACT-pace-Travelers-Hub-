@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test routes test mission 1`] = `
+<h4
+  class="mission-table-heading"
+>
+  Status
+</h4>
+`;
+
+exports[`Test routes test profile 1`] = `
+<h3>
+  My Rockets
+</h3>
+`;
+
+exports[`Test routes test rockets 1`] = `
+<a
+  aria-current="page"
+  class="active"
+  href="/rockets"
+  style="font-weight: bold; border-bottom: 3px solid #3895ff56;"
+>
+  Rockets
+</a>
+`;

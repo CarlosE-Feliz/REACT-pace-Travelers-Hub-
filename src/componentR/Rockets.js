@@ -26,7 +26,26 @@ const Rockets = () => {
               {post.reserved ? <span style={{ margin: '5px' }} className="badge bg-success">Reserved</span> : null}
               {post.desc}
             </p>
-            {post.reserved ? <button type="button" onClick={reserved} id={post.id} className="btn btn-secondary">Cancel Reservation</button> : <button type="button" onClick={reserved} id={post.id} className="btn btn-primary">Reserve Rocket</button>}
+            {post.reserved ? (
+              <button
+                type="button"
+                onClick={reserved}
+                id={post.id}
+                c
+                lassName="btn btn-secondary"
+              >
+                Cancel Reservation
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={reserved}
+                id={post.id}
+                className="btn btn-primary"
+              >
+                Reserve Rocket
+              </button>
+            )}
           </Info>
         </Section>
       ))}
