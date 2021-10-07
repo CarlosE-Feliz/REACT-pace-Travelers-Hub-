@@ -13,24 +13,24 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export const getMissions = () => (dispatch) => {
-  axios.get(missionsURL)
-    .then((res) => {
-      const resData = res.data;
-      const missionsArr = [];
-      resData.forEach((record) => {
-        const missionObj = {
-          id: record.mission_id,
-          name: record.mission_name,
-          desc: record.description,
-        };
-        missionsArr.push(missionObj);
-      });
-      dispatch({
-        type: GET_MISSIONS,
-        missionsArr,
-      });
+export const getMissions = () => async (dispatch) => {
+  const res = await axios.get(missionsURL);
+  const resData = res.data;
+  if (resData) {
+    const missionsArr = [];
+    resData.forEach((record) => {
+      const missionObj = {
+        id: record.mission_id,
+        name: record.mission_name,
+        desc: record.description,
+      };
+      missionsArr.push(missionObj);
     });
+    dispatch({
+      type: GET_MISSIONS,
+      missionsArr,
+    });
+  }
 };
 
 export default reducer;

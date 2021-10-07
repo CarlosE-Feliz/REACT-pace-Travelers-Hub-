@@ -13,13 +13,18 @@ import Rocks from './componentR/Rockets';
 import Missions from './componentM/Missions';
 import MyProfile from './componentP/Profile';
 import { getRock } from './redux/rocketsAPI';
+import { getMissions } from './redux/missionsAPI';
 
 function App() {
   const dispatch = useDispatch();
   const loadRocketsAction = bindActionCreators(getRock, dispatch);
+  const loadMissionsAction = bindActionCreators(getMissions, dispatch);
+
   useEffect(() => {
     loadRocketsAction();
+    loadMissionsAction();
   }, []);
+
   return (
     <Router>
       <div className="header">
