@@ -70,21 +70,53 @@ td h4 {
   font-size: 18px;
 }
 
-h4.not-a-member {
+h4.not-a-member,
+.active-member {
   color: white;
-  background-color: gray;
-  border: 1px solid gray;
   border-radius: 2px;
 }
 
-button.join-button {
+h4.not-a-member {
+  background-color: gray;
+  border: 1px solid gray;
+}
+
+h4.active-member {
+  background-color: #18a2b8;
+  border: 1px solid #18a2b8;
+}
+
+button.join-button .leave-button {
   background-color: transparent;
-  border: 2px solid gray;
   border-radius: 3px;
   padding: 2px;
+}
+
+button.join-button {
+  border: 2px solid #343a40;
+  color: #343a40;
+}
+
+button.leave-button {
+  border: 2px solid #dc3645;
+  color: #dc3645;
 }
 
 td.mission-status,
 .mission-button {
   text-align: center;
+}
+
+.joined-missions {
+  width: 50%;
+}
+
+.joined-mission-item {
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 0.1rem;
+}
+
+h4.joined-mission-title {
+  margin: 2rem;
 }

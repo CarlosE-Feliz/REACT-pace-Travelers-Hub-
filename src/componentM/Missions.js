@@ -1,34 +1,38 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { getMissions } from '../redux/missionsAPI';
+import { joinMission } from '../redux/missionsAPI';
 import Mission from './Mission';
 
 const Missions = () => {
   const missions = useSelector((state) => state.missions);
   const dispatch = useDispatch();
-  const loadMissionsAction = bindActionCreators(getMissions, dispatch);
-
-  useEffect(() => {
-    loadMissionsAction();
-  }, []);
+  const joined = (e) => {
+    dispatch(joinMission(missions, e.target.id));
+  };
 
   return (
     <div className="missions-list">
       <table className="missions-table">
-        <tr>
-          <th><h4 className="mission-table-heading">Missions</h4></th>
-          <th className="mission-description"><h4 className="mission-table-heading">Descriptions</h4></th>
-          <th><h4 className="mission-table-heading">Status</h4></th>
-          <th><h4 className="mission-table-heading"> </h4></th>
-        </tr>
-        {missions.map((item) => (
-          <Mission
-            key={item.id}
-            missionName={item.name}
-            missionDesc={item.desc}
-          />
-        ))}
+        <thead>
+          <tr>
+            <th><h4 className="mission-table-heading">Missions</h4></th>
+            <th className="mission-description"><h4 className="mission-table-heading">Descriptions</h4></th>
+            <th><h4 className="mission-table-heading">Status</h4></th>
+            <th><h4 className="mission-table-heading"> </h4></th>
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((item) => (
+            <Mission
+              key={item.id}
+              missionID={item.id}
+              missionName={item.name}
+              missionDesc={item.desc}
+              hasJoined={item.joined}
+              joinFunc={joined}
+            />
+          ))}
+        </tbody>
       </table>
     </div>
   );
