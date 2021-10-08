@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-// import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { rocketReseve } from '../redux/rocketsAPI';
 
@@ -23,7 +21,9 @@ const Rockets = () => {
               {post.name}
             </h1>
             <p>
-              {post.reserved ? <span style={{ margin: '5px' }} className="badge bg-success">Reserved</span> : null}
+              {post.reserved && (
+              <span style={{ margin: '5px' }} className="badge bg-success">Reserved</span>
+              )}
               {post.desc}
             </p>
             {post.reserved ? (

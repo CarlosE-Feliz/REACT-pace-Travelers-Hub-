@@ -12,20 +12,28 @@ const MyProfile = () => {
     <Profile>
       <div className="joined-missions">
         <h3>My Missions</h3>
-        {missions.map((record) => (record.joined ? (
-          <div key={record.id} className="joined-mission-item">
-            <h4 className="joined-mission-title">{record.name}</h4>
-          </div>
-        ) : null))}
+        {
+            missions.filter(({ joined }) => joined).map(({ name, id }) => (
+              <>
+                <div key={id} className="joined-mission-item">
+                  <h4 className="joined-mission-title">{name}</h4>
+                </div>
+              </>
+            ))
+          }
       </div>
       <Rockets>
         <h3>My Rockets</h3>
         <RocketsItem>
-          {rockets.map((item) => (item.reserved ? (
-            <RocketItems key={item.id}>
-              <NameRocket key={item.id}>{ item.name }</NameRocket>
-            </RocketItems>
-          ) : null))}
+          {
+            rockets.filter(({ reserved }) => reserved).map(({ name, id }) => (
+              <>
+                <RocketItems key={id}>
+                  <NameRocket key={id}>{ name }</NameRocket>
+                </RocketItems>
+              </>
+            ))
+          }
         </RocketsItem>
       </Rockets>
     </Profile>

@@ -12,8 +12,14 @@ const Mission = ({
     <td className="mission-title"><h4>{missionName}</h4></td>
     <td className="mission-desc"><p>{missionDesc}</p></td>
     <td className="mission-status">
-      {!hasJoined ? <h4 className="not-a-member">NOT A MEMBER</h4>
-        : <h4 className="active-member">Active Member</h4>}
+
+      { hasJoined && (
+      <h4 className="not-a-member">NOT A MEMBER</h4>
+      )}
+
+      {
+      !hasJoined ? <h4 className="active-member">Active Member</h4> : null
+        }
     </td>
     <td className="mission-button">
       {!hasJoined ? <button className="join-button" onClick={joinFunc} id={missionID} type="button">Join Mission</button>

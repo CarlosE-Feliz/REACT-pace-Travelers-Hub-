@@ -1,5 +1,3 @@
-/* eslint-disable eqeqeq */
-
 import axios from 'axios';
 
 const GET_ROCKETS = 'GET_ROCKETS';
@@ -20,7 +18,7 @@ const reducer = (state = initialRockets, action) => {
 
 export const rocketReseve = (currentState, id) => (dispatch) => {
   const newState = currentState.map((rocket) => {
-    if (rocket.id != id) {
+    if (JSON.stringify(rocket.id) !== id) {
       return rocket;
     }
     return { ...rocket, reserved: !rocket.reserved };
@@ -52,10 +50,4 @@ export const getRock = () => (dispatch) => {
       });
     });
 };
-
-// id
-// rocket_name
-// rocket_type
-// flickr_images [0]
-
 export default reducer;

@@ -9,7 +9,7 @@ import {
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import logo from './media/planet.png';
-import Rocks from './componentR/Rockets';
+import Rockets from './componentR/Rockets';
 import Missions from './componentM/Missions';
 import MyProfile from './componentP/Profile';
 import { getRock } from './redux/rocketsAPI';
@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="header">
         <nav className="nav-bar flex">
           <div className="logo flex">
@@ -72,13 +72,13 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/">
-          <Rocks />
+          <Rockets />
         </Route>
         <Route path="/mission">
           <Missions />
         </Route>
         <Route path="/rockets">
-          <Rocks />
+          <Rockets />
         </Route>
         <Route path="/profile">
           <MyProfile />
