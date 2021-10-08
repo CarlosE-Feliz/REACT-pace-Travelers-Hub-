@@ -13,7 +13,7 @@ const MyProfile = () => {
       <div className="joined-missions">
         <h3>My Missions</h3>
         {missions.map((record) => (record.joined ? (
-          <div className="joined-mission-item">
+          <div key={record.id} className="joined-mission-item">
             <h4 className="joined-mission-title">{record.name}</h4>
           </div>
         ) : null))}

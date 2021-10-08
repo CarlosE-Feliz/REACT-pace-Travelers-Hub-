@@ -31,8 +31,7 @@ const Rockets = () => {
                 type="button"
                 onClick={reserved}
                 id={post.id}
-                c
-                lassName="btn btn-secondary"
+                className="btn btn-secondary"
               >
                 Cancel Reservation
               </button>
