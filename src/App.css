@@ -1,0 +1,122 @@
+.flex {
+  display: flex;
+}
+
+.nav-bar {
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #3896ff;
+}
+
+a:focus {
+  border-bottom: 3px solid #3895ff56;
+}
+
+.ul-nav {
+  list-style: none;
+  justify-content: space-around;
+}
+
+.nav-item {
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.logo img {
+  margin-right: 20px;
+}
+
+.header {
+  border-bottom: 2px gray solid;
+  margin: 0 40px 0 40px;
+}
+
+.img-logo {
+  width: 60px;
+  margin: 5px;
+}
+
+.missions-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+table.missions-table {
+  table-layout: fixed;
+  width: 80%;
+  margin-top: 25px;
+}
+
+table.missions-table td,
+th {
+  border: 1px solid gray;
+}
+
+th.mission-description {
+  width: 50%;
+}
+
+h4.mission-table-heading {
+  margin-right: 30px;
+}
+
+td h4 {
+  font-size: 18px;
+}
+
+h4.not-a-member,
+.active-member {
+  color: white;
+  border-radius: 2px;
+}
+
+h4.not-a-member {
+  background-color: gray;
+  border: 1px solid gray;
+}
+
+h4.active-member {
+  background-color: #18a2b8;
+  border: 1px solid #18a2b8;
+}
+
+button.join-button .leave-button {
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+button.join-button {
+  border: 2px solid #343a40;
+  color: #343a40;
+}
+
+button.leave-button {
+  border: 2px solid #dc3645;
+  color: #dc3645;
+}
+
+td.mission-status,
+.mission-button {
+  text-align: center;
+}
+
+.joined-missions {
+  width: 50%;
+}
+
+.joined-mission-item {
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 0.1rem;
+}
+
+h4.joined-mission-title {
+  margin: 2rem;
+}
